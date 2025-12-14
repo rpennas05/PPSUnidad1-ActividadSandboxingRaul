@@ -1,0 +1,17 @@
+**Para realizar este documento he tomado en cuanta la tabla comparativa que hay en los apuntes de clase.**
+
+##La Seguridad de los lenguajes de programación
+
+La gestión de la memoria es uno de los elementos que más destaca. Lenguajes de programación como Python, Java y .NET utilizan recolectores de basura para gestionar la memoria automáticamente y así prevenir errores comunes como la corrupción de memoria o los desbordamientos de búfer.
+Esto representa un gran alivio para el desarrollador, pero desde la perspectiva del pentesting también implica que es menos probable que existan muchas vulnerabilidades tradicionales de bajo nivel,
+y que los ataques deben enfocarse más en la lógica de la aplicación y su configuración que en el aprovechamiento de la memoria. PHP, por otra parte, ha sido más vulnerable en este sentido a lo largo de su historia, especialmente cuando se combinan funciones nativas inseguras, aunque ha mejorado.
+
+El tipado es también un factor esencial en la seguridad. Java y C# son lenguajes de programación que poseen un tipado estático fuerte, Python tiene un tipado dinámico fuerte, mientras que PHP ha sido históricamente débilmente tipado. Esto significa que lenguajes como PHP tienen un mayor peligro de confusión de tipos y errores de validación que pueden llevar a vulnerabilidades, en contraste con Java o C#, donde se detectan muchos errores durante la compilación, lo cual disminuye el área de ataque.
+
+En cuanto a visibilidad y control de acceso, Java y .NET aplican limitaciones rigurosas (internal, protected, private) que sirven para encapsular información sensible; en cambio, Python y PHP se apoyan más en la configuración externa y las convenciones.  Esto señala que, si la lógica de una aplicación no está adecuadamente protegida, es más sencillo para un atacante tomar ventaja de accesos no intencionados en aplicaciones PHP o Python.
+
+Asimismo, el aislamiento y los ambientes de ejecución cambian.  En tanto que PHP está muy condicionado por el servidor y su configuración, Java con la JVM y .NET con CLR implementan sandboxing parcial y administración de permisos; por su parte, Python lo hace a través de contenedores y virtualenv.  Esto enfatiza la relevancia de no solamente crear código seguro, sino también de establecer adecuadamente el entorno para reducir los riesgos.
+
+Para concluir, las habilidades de autenticación/autorización y criptográficas demuestran que todos los lenguajes modernos tienen bibliotecas sólidas, aunque con variaciones:  Las bibliotecas externas de Java y Python son bastante completas, .NET incorpora la seguridad tanto en Windows como en el runtime, y PHP tiene una alta dependencia con los marcos de trabajo y las extensiones.  Desde la perspectiva del pentesting, esto quiere decir que la seguridad puede ser tan sólida como las decisiones de configuración e implementación tomadas por el desarrollador, no únicamente por el lenguaje en sí.
+
+En resumen, creo que no hay ningún lenguaje que garantice seguridad por sí solo.  La selección del lenguaje tiene un impacto en la superficie de ataque y en el tipo de vulnerabilidades más frecuentes. Sin embargo, lo que realmente determina la seguridad es la forma en que se llevan a cabo las medidas: tipado, gestión de memoria, control de acceso, entorno, autenticación y criptografía.  Para una persona con tu perfil, enfocarse en comprender estas discrepancias facilita prever riesgos particulares de acuerdo al lenguaje y al stack, así como también elaborar pruebas de penetración más eficaces.
