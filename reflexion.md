@@ -1,6 +1,6 @@
 **Para realizar este documento he tomado en cuanta la tabla comparativa que hay en los apuntes de clase.**
 
-##La Seguridad de los lenguajes de programación
+## La Seguridad de los lenguajes de programación
 
 La gestión de la memoria es uno de los elementos que más destaca. Lenguajes de programación como Python, Java y .NET utilizan recolectores de basura para gestionar la memoria automáticamente y así prevenir errores comunes como la corrupción de memoria o los desbordamientos de búfer.
 Esto representa un gran alivio para el desarrollador, pero desde la perspectiva del pentesting también implica que es menos probable que existan muchas vulnerabilidades tradicionales de bajo nivel,
